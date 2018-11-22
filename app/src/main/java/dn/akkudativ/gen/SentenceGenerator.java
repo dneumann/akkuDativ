@@ -20,21 +20,21 @@ public class SentenceGenerator {
 	public SentenceGenerator() {
 		firstWords.add(new Word("Der", nounsMasc));
 		firstWords.add(new Word("Ein", nounsMasc));
-		firstWords.add(new Word("Mein", nounsMasc));
-		firstWords.add(new Word("Dein", nounsMasc));
-		firstWords.add(new Word("Sein", nounsMasc));
+//		firstWords.add(new Word("Mein", nounsMasc));
+//		firstWords.add(new Word("Dein", nounsMasc));
+//		firstWords.add(new Word("Sein", nounsMasc));
 
 		firstWords.add(new Word("Die", nounsFem));
 		firstWords.add(new Word("Eine", nounsFem));
-		firstWords.add(new Word("Meine", nounsFem));
-		firstWords.add(new Word("Deine", nounsFem));
-		firstWords.add(new Word("Seine", nounsFem));
+//		firstWords.add(new Word("Meine", nounsFem));
+//		firstWords.add(new Word("Deine", nounsFem));
+//		firstWords.add(new Word("Seine", nounsFem));
 
 		firstWords.add(new Word("Das", nounsIt));
 		firstWords.add(new Word("Ein", nounsIt));
-		firstWords.add(new Word("Mein", nounsIt));
-		firstWords.add(new Word("Dein", nounsIt));
-		firstWords.add(new Word("Sein", nounsIt));
+//		firstWords.add(new Word("Mein", nounsIt));
+//		firstWords.add(new Word("Dein", nounsIt));
+//		firstWords.add(new Word("Sein", nounsIt));
 
 		nounsMasc.add(new Word("Junge", verbs));
 		nounsMasc.add(new Word("Hund", verbs));
@@ -58,7 +58,7 @@ public class SentenceGenerator {
 		lastWordsMasc.add(new Word("Löwen", null));
 		lastWordsMasc.add(new Word("Elefanten", null));
 
-		lastWordsFem.add(new Word("Flasche", null));
+		lastWordsFem.add(new Word("Maus", null));
 		lastWordsFem.add(new Word("Katze", null));
 		lastWordsFem.add(new Word("Ente", null));
 		lastWordsFem.add(new Word("Engländerin", null));
@@ -70,6 +70,7 @@ public class SentenceGenerator {
 		lastWordsIt.add(new Word("Huhn", null));
 		lastWordsIt.add(new Word("Hündchen", null));
 		lastWordsIt.add(new Word("Krokodil", null));
+		lastWordsIt.add(new Word("Seeungeheuer", null));
 
 	}
 
@@ -96,69 +97,99 @@ public class SentenceGenerator {
 		verbs.add(new Verb("verarschte", akkus));
 		verbs.add(new Verb("lachte über", akkus));
 		verbs.add(new Verb("überlistete", akkus));
-		verbs.add(new Verb("verfolgte", akkus));
+        verbs.add(new Verb("verfolgte", akkus));
+        verbs.add(new Verb("beneidete", akkus));
+        verbs.add(new Verb("stolperte über", akkus));
+        verbs.add(new Verb("lief um", "herum", akkus));
+        verbs.add(new Verb("hielt", "fest", akkus));
+        verbs.add(new Verb("ließ", "tanzen", akkus));
+        verbs.add(new Verb("bat", "um Rat", akkus));
 
-		akkus.add(new Akku("den", lastWordsMasc, "Bestimmter Artikel"));
-		akkus.add(new Akku("einen", lastWordsMasc, "Unbestimmter Artikel"));
-		akkus.add(new Akku("den", lastWordsMasc, "Bestimmter Artikel"));
-		akkus.add(new Akku("einen", lastWordsMasc, "Unbestimmter Artikel"));
-		akkus.add(new Akku("den", lastWordsMasc, "Bestimmter Artikel"));
-		akkus.add(new Akku("einen", lastWordsMasc, "Unbestimmter Artikel"));
 		akkus.add(new Akku("den", lastWordsMasc, "Bestimmter Artikel"));
 		akkus.add(new Akku("einen", lastWordsMasc, "Unbestimmter Artikel"));
 		akkus.add(new Akku("meinen", lastWordsMasc, "Possessivpronomen von 'ich'"));
-		akkus.add(new Akku("deinen", lastWordsMasc, "Possessivpronomen von 'du'"));
-		akkus.add(new Akku("ihren", lastWordsMasc, "Possessivpronomen von 'sie'"));
-		akkus.add(new Akku("seinen", lastWordsMasc, "Possessivpronomen von 'er'"));
-		akkus.add(new Akku("unseren", lastWordsMasc, "Possessivpronomen von 'wir'"));
-		akkus.add(new Akku("euren", lastWordsMasc, "Possessivpronomen von 'ihr'"));
+//		akkus.add(new Akku("deinen", lastWordsMasc, "Possessivpronomen von 'du'"));
+//		akkus.add(new Akku("ihren", lastWordsMasc, "Possessivpronomen von 'sie'"));
+//		akkus.add(new Akku("seinen", lastWordsMasc, "Possessivpronomen von 'er'"));
+//		akkus.add(new Akku("unseren", lastWordsMasc, "Possessivpronomen von 'wir'"));
+//		akkus.add(new Akku("euren", lastWordsMasc, "Possessivpronomen von 'ihr'"));
 
-		akkus.add(new Akku("die", lastWordsFem, "Bestimmter Artikel"));
-		akkus.add(new Akku("eine", lastWordsFem, "Unbestimmter Artikel"));
-		akkus.add(new Akku("die", lastWordsFem, "Bestimmter Artikel"));
-		akkus.add(new Akku("eine", lastWordsFem, "Unbestimmter Artikel"));
-		akkus.add(new Akku("die", lastWordsFem, "Bestimmter Artikel"));
-		akkus.add(new Akku("eine", lastWordsFem, "Unbestimmter Artikel"));
 		akkus.add(new Akku("die", lastWordsFem, "Bestimmter Artikel"));
 		akkus.add(new Akku("eine", lastWordsFem, "Unbestimmter Artikel"));
 		akkus.add(new Akku("meine", lastWordsFem, "Possessivpronomen von 'ich'"));
-		akkus.add(new Akku("deine", lastWordsFem, "Possessivpronomen von 'du'"));
-		akkus.add(new Akku("ihre", lastWordsFem, "Possessivpronomen von 'sie'"));
-		akkus.add(new Akku("seine", lastWordsFem, "Possessivpronomen von 'er'"));
-		akkus.add(new Akku("unsere", lastWordsFem, "Possessivpronomen von 'wir'"));
-		akkus.add(new Akku("eure", lastWordsFem, "Possessivpronomen von 'ihr'"));
+//		akkus.add(new Akku("deine", lastWordsFem, "Possessivpronomen von 'du'"));
+//		akkus.add(new Akku("ihre", lastWordsFem, "Possessivpronomen von 'sie'"));
+//		akkus.add(new Akku("seine", lastWordsFem, "Possessivpronomen von 'er'"));
+//		akkus.add(new Akku("unsere", lastWordsFem, "Possessivpronomen von 'wir'"));
+//		akkus.add(new Akku("eure", lastWordsFem, "Possessivpronomen von 'ihr'"));
 
-		akkus.add(new Akku("das", lastWordsIt, "Bestimmter Artikel"));
-		akkus.add(new Akku("ein", lastWordsIt, "Unbestimmter Artikel"));
-		akkus.add(new Akku("das", lastWordsIt, "Bestimmter Artikel"));
-		akkus.add(new Akku("ein", lastWordsIt, "Unbestimmter Artikel"));
-		akkus.add(new Akku("das", lastWordsIt, "Bestimmter Artikel"));
-		akkus.add(new Akku("ein", lastWordsIt, "Unbestimmter Artikel"));
 		akkus.add(new Akku("das", lastWordsIt, "Bestimmter Artikel"));
 		akkus.add(new Akku("ein", lastWordsIt, "Unbestimmter Artikel"));
 		akkus.add(new Akku("mein", lastWordsIt, "Possessivpronomen von 'ich'"));
-		akkus.add(new Akku("dein", lastWordsIt, "Possessivpronomen von 'du'"));
-		akkus.add(new Akku("ihr", lastWordsIt, "Possessivpronomen von 'sie'"));
-		akkus.add(new Akku("sein", lastWordsIt, "Possessivpronomen von 'er'"));
-		akkus.add(new Akku("unser", lastWordsIt, "Possessivpronomen von 'wir'"));
-		akkus.add(new Akku("euer", lastWordsIt, "Possessivpronomen von 'ihr'"));
+//		akkus.add(new Akku("dein", lastWordsIt, "Possessivpronomen von 'du'"));
+//		akkus.add(new Akku("ihr", lastWordsIt, "Possessivpronomen von 'sie'"));
+//		akkus.add(new Akku("sein", lastWordsIt, "Possessivpronomen von 'er'"));
+//		akkus.add(new Akku("unser", lastWordsIt, "Possessivpronomen von 'wir'"));
+//		akkus.add(new Akku("euer", lastWordsIt, "Possessivpronomen von 'ihr'"));
 
-		akkus.add(new Akku("ihn", null, "AkkuDativ von 'er'"));
-		akkus.add(new Akku("sie", null, "AkkuDativ von 'sie'"));
-		akkus.add(new Akku("mich", null, "AkkuDativ von 'ich'"));
-		akkus.add(new Akku("dich", null, "AkkuDativ von 'du'"));
+		akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
+		akkus.add(new Akku("sie", null, "Akku oder Dat von 'sie'"));
+		akkus.add(new Akku("mich", null, "Akku oder Dat von 'ich'"));
+		akkus.add(new Akku("dich", null, "Akku oder Dat von 'du'"));
 
 	}
 
 	private void addDativs() {
-		verbs.add(new Verb("gratulierte", dativs));
+        verbs.add(new Verb("bedankte sich bei", dativs));
+        verbs.add(new Verb("gehorchte", dativs));
+        verbs.add(new Verb("hatte Angst vor", dativs));
+        verbs.add(new Verb("gratulierte", dativs));
+        verbs.add(new Verb("gefiel", dativs));
+        verbs.add(new Verb("gefiel", dativs));
+        verbs.add(new Verb("lag auf", dativs));
+        verbs.add(new Verb("saß auf", dativs));
+        verbs.add(new Verb("schwebte über", dativs));
+        verbs.add(new Verb("ruhte sich auf", "aus", dativs));
+        verbs.add(new Verb("spielte mit", dativs));
 		verbs.add(new Verb("lief mit", "weg", dativs));
-		verbs.add(new Verb("lief", "hinterher", dativs));
-		
+        verbs.add(new Verb("lief", "hinterher", dativs));
+        verbs.add(new Verb("gab", "ein Geschenk", dativs));
+        verbs.add(new Verb("schenkte", "einen Computer", dativs));
+        verbs.add(new Verb("schrieb", "einen Brief", dativs));
+        verbs.add(new Verb("warf", "einen Ball zu", dativs));
+        verbs.add(new Verb("nahm", "eine Blume weg", dativs));
+        verbs.add(new Verb("spielte", "den Ball zu", dativs));
+        verbs.add(new Verb("hörte", "nie zu", dativs));
+        verbs.add(new Verb("traute", "nicht", dativs));
+        verbs.add(new Verb("erfüllte", "einen Wunsch", dativs));
+        verbs.add(new Verb("erzählte", "einen Witz", dativs));
+        verbs.add(new Verb("zeigte", "die Zunge", dativs));
+        verbs.add(new Verb("brachte", "nur Blödsinn bei", dativs));
+        verbs.add(new Verb("sagte", "alles vor", dativs));
+        verbs.add(new Verb("half", "beim Spicken", dativs));
+        verbs.add(new Verb("las", "aus einem Buch vor", dativs));
+        verbs.add(new Verb("versteckte sich hinter", dativs));
+        verbs.add(new Verb("ging zu", dativs));
+        verbs.add(new Verb("stand vor", dativs));
+        verbs.add(new Verb("stand neben", dativs));
+        verbs.add(new Verb("sagte zu", ": \"Buh!\"", dativs));
+
 		dativs.add(new Dativ("dem", lastWordsMasc, "Bestimmter Artikel"));
 		dativs.add(new Dativ("einem", lastWordsMasc, "Unbestimmter Artikel"));
+		dativs.add(new Dativ("meinem", lastWordsMasc, "Possessivpronomen von 'ich'"));
 
-		dativs.add(new Dativ("ihm", null, "AkkuDativ von 'er'"));
+		dativs.add(new Dativ("der", lastWordsFem, "Bestimmter Artikel"));
+		dativs.add(new Dativ("einer", lastWordsFem, "Unbestimmter Artikel"));
+		dativs.add(new Dativ("meiner", lastWordsFem, "Possessivpronomen von 'ich'"));
+
+        dativs.add(new Dativ("dem", lastWordsIt, "Bestimmter Artikel"));
+        dativs.add(new Dativ("einem", lastWordsIt, "Unbestimmter Artikel"));
+        dativs.add(new Dativ("meinem", lastWordsIt, "Possessivpronomen von 'ich'"));
+
+        dativs.add(new Dativ("ihm", null, "Akku oder Dat von 'er'"));
+        dativs.add(new Dativ("ihr", null, "Akku oder Dat von 'sie'"));
+        dativs.add(new Dativ("mir", null, "Akku oder Dat von 'ich'"));
+        dativs.add(new Dativ("dir", null, "Akku oder Dat von 'du'"));
 
 	}
 

@@ -38,16 +38,21 @@ public class SentenceGenerator {
 
 		nounsMasc.add(new Word("Junge", verbs));
 		nounsMasc.add(new Word("Hund", verbs));
-		nounsMasc.add(new Word("Elefant", verbs));
+        nounsMasc.add(new Word("Elefant", verbs));
+        nounsMasc.add(new Word("Alligator", verbs));
+        nounsMasc.add(new Word("Englischlehrer", verbs));
 
 		nounsFem.add(new Word("Frau", verbs));
 		nounsFem.add(new Word("Katze", verbs));
-		nounsFem.add(new Word("Schlange", verbs));
+        nounsFem.add(new Word("Schlange", verbs));
+        nounsFem.add(new Word("Kuh", verbs));
+        nounsFem.add(new Word("Biene", verbs));
 
 		nounsIt.add(new Word("Mädchen", verbs));
 		nounsIt.add(new Word("Erdferkel", verbs));
 		nounsIt.add(new Word("Meerschweinchen", verbs));
-		nounsIt.add(new Word("Alien", verbs));
+        nounsIt.add(new Word("Alien", verbs));
+        nounsIt.add(new Word("Schaf", verbs));
 
 		addAkkus();
 		addDativs();
@@ -58,7 +63,9 @@ public class SentenceGenerator {
 		lastWordsMasc.add(new Word("Löwen", null));
 		lastWordsMasc.add(new Word("Elefanten", null));
 
-		lastWordsFem.add(new Word("Maus", null));
+        lastWordsFem.add(new Word("Maus", null));
+        lastWordsFem.add(new Word("Kuh", null));
+        lastWordsFem.add(new Word("Ratte", null));
 		lastWordsFem.add(new Word("Katze", null));
 		lastWordsFem.add(new Word("Ente", null));
 		lastWordsFem.add(new Word("Engländerin", null));
@@ -70,7 +77,8 @@ public class SentenceGenerator {
 		lastWordsIt.add(new Word("Huhn", null));
 		lastWordsIt.add(new Word("Hündchen", null));
 		lastWordsIt.add(new Word("Krokodil", null));
-		lastWordsIt.add(new Word("Seeungeheuer", null));
+        lastWordsIt.add(new Word("Seeungeheuer", null));
+        lastWordsIt.add(new Word("Schaf", null));
 
 	}
 
@@ -82,10 +90,7 @@ public class SentenceGenerator {
 		verbs.add(new Verb("beleidigte", akkus));
 		verbs.add(new Verb("beschimpfte", akkus));
 		verbs.add(new Verb("zeigte auf", akkus));
-		verbs.add(new Verb("provozierte", akkus));
 		verbs.add(new Verb("überholte", akkus));
-		verbs.add(new Verb("hetzte", akkus));
-		verbs.add(new Verb("überzeugte", akkus));
 		verbs.add(new Verb("erzählte über", akkus));
 		verbs.add(new Verb("kletterte auf", akkus));
 		verbs.add(new Verb("sprang über", akkus));
@@ -102,12 +107,16 @@ public class SentenceGenerator {
         verbs.add(new Verb("stolperte über", akkus));
         verbs.add(new Verb("lief um", "herum", akkus));
         verbs.add(new Verb("hielt", "fest", akkus));
+        verbs.add(new Verb("log", "an", akkus));
         verbs.add(new Verb("ließ", "tanzen", akkus));
         verbs.add(new Verb("bat", "um Rat", akkus));
+        verbs.add(new Verb("besiegte", "im Armdrücken", akkus));
+        verbs.add(new Verb("brachte", "zum Lachen", akkus));
+        verbs.add(new Verb("brüllte", "an", akkus));
 
 		akkus.add(new Akku("den", lastWordsMasc, "Bestimmter Artikel"));
 		akkus.add(new Akku("einen", lastWordsMasc, "Unbestimmter Artikel"));
-		akkus.add(new Akku("meinen", lastWordsMasc, "Possessivpronomen von 'ich'"));
+//		akkus.add(new Akku("meinen", lastWordsMasc, "Possessivpronomen von 'ich'"));
 //		akkus.add(new Akku("deinen", lastWordsMasc, "Possessivpronomen von 'du'"));
 //		akkus.add(new Akku("ihren", lastWordsMasc, "Possessivpronomen von 'sie'"));
 //		akkus.add(new Akku("seinen", lastWordsMasc, "Possessivpronomen von 'er'"));
@@ -116,7 +125,7 @@ public class SentenceGenerator {
 
 		akkus.add(new Akku("die", lastWordsFem, "Bestimmter Artikel"));
 		akkus.add(new Akku("eine", lastWordsFem, "Unbestimmter Artikel"));
-		akkus.add(new Akku("meine", lastWordsFem, "Possessivpronomen von 'ich'"));
+//		akkus.add(new Akku("meine", lastWordsFem, "Possessivpronomen von 'ich'"));
 //		akkus.add(new Akku("deine", lastWordsFem, "Possessivpronomen von 'du'"));
 //		akkus.add(new Akku("ihre", lastWordsFem, "Possessivpronomen von 'sie'"));
 //		akkus.add(new Akku("seine", lastWordsFem, "Possessivpronomen von 'er'"));
@@ -125,14 +134,17 @@ public class SentenceGenerator {
 
 		akkus.add(new Akku("das", lastWordsIt, "Bestimmter Artikel"));
 		akkus.add(new Akku("ein", lastWordsIt, "Unbestimmter Artikel"));
-		akkus.add(new Akku("mein", lastWordsIt, "Possessivpronomen von 'ich'"));
+//		akkus.add(new Akku("mein", lastWordsIt, "Possessivpronomen von 'ich'"));
 //		akkus.add(new Akku("dein", lastWordsIt, "Possessivpronomen von 'du'"));
 //		akkus.add(new Akku("ihr", lastWordsIt, "Possessivpronomen von 'sie'"));
 //		akkus.add(new Akku("sein", lastWordsIt, "Possessivpronomen von 'er'"));
 //		akkus.add(new Akku("unser", lastWordsIt, "Possessivpronomen von 'wir'"));
 //		akkus.add(new Akku("euer", lastWordsIt, "Possessivpronomen von 'ihr'"));
 
-		akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
+        akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
+        akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
+        akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
+        akkus.add(new Akku("ihn", null, "Akku oder Dat von 'er'"));
 		akkus.add(new Akku("sie", null, "Akku oder Dat von 'sie'"));
 		akkus.add(new Akku("mich", null, "Akku oder Dat von 'ich'"));
 		akkus.add(new Akku("dich", null, "Akku oder Dat von 'du'"));
@@ -161,6 +173,8 @@ public class SentenceGenerator {
         verbs.add(new Verb("spielte", "den Ball zu", dativs));
         verbs.add(new Verb("hörte", "nie zu", dativs));
         verbs.add(new Verb("traute", "nicht", dativs));
+        verbs.add(new Verb("befahl", "zu singen", dativs));
+        verbs.add(new Verb("machte", "einen Heiratsantrag", dativs));
         verbs.add(new Verb("erfüllte", "einen Wunsch", dativs));
         verbs.add(new Verb("erzählte", "einen Witz", dativs));
         verbs.add(new Verb("zeigte", "die Zunge", dativs));
@@ -168,6 +182,7 @@ public class SentenceGenerator {
         verbs.add(new Verb("sagte", "alles vor", dativs));
         verbs.add(new Verb("half", "beim Spicken", dativs));
         verbs.add(new Verb("las", "aus einem Buch vor", dativs));
+        verbs.add(new Verb("flüsterte", "etwas zu", dativs));
         verbs.add(new Verb("versteckte sich hinter", dativs));
         verbs.add(new Verb("ging zu", dativs));
         verbs.add(new Verb("stand vor", dativs));
@@ -176,16 +191,19 @@ public class SentenceGenerator {
 
 		dativs.add(new Dativ("dem", lastWordsMasc, "Bestimmter Artikel"));
 		dativs.add(new Dativ("einem", lastWordsMasc, "Unbestimmter Artikel"));
-		dativs.add(new Dativ("meinem", lastWordsMasc, "Possessivpronomen von 'ich'"));
+		//dativs.add(new Dativ("meinem", lastWordsMasc, "Possessivpronomen von 'ich'"));
 
 		dativs.add(new Dativ("der", lastWordsFem, "Bestimmter Artikel"));
 		dativs.add(new Dativ("einer", lastWordsFem, "Unbestimmter Artikel"));
-		dativs.add(new Dativ("meiner", lastWordsFem, "Possessivpronomen von 'ich'"));
+		//dativs.add(new Dativ("meiner", lastWordsFem, "Possessivpronomen von 'ich'"));
 
         dativs.add(new Dativ("dem", lastWordsIt, "Bestimmter Artikel"));
         dativs.add(new Dativ("einem", lastWordsIt, "Unbestimmter Artikel"));
-        dativs.add(new Dativ("meinem", lastWordsIt, "Possessivpronomen von 'ich'"));
+        //dativs.add(new Dativ("meinem", lastWordsIt, "Possessivpronomen von 'ich'"));
 
+        dativs.add(new Dativ("ihm", null, "Akku oder Dat von 'er'"));
+        dativs.add(new Dativ("ihm", null, "Akku oder Dat von 'er'"));
+        dativs.add(new Dativ("ihm", null, "Akku oder Dat von 'er'"));
         dativs.add(new Dativ("ihm", null, "Akku oder Dat von 'er'"));
         dativs.add(new Dativ("ihr", null, "Akku oder Dat von 'sie'"));
         dativs.add(new Dativ("mir", null, "Akku oder Dat von 'ich'"));

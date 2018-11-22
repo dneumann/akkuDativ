@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+import dn.akkudativ.gen.Akku;
 import dn.akkudativ.gen.Sentence;
 import dn.akkudativ.gen.SentenceGenerator;
 
@@ -28,8 +29,9 @@ public class StateChanger {
 
     public List<State> checkAnswer(String answer) {
 
+        String a_or_d = currentSentence.akkuDativ instanceof Akku ? "Akkusativ" : "Dativ";
         State correctAkkuDativ = State.create("textView_correctAkkuDativ", TextView.class)
-                .with("setText", currentSentence.akkuDativ.w);
+                .with("setText", currentSentence.akkuDativ.w + "  (" + a_or_d + ")");
 
         int color = 0;
         if (currentSentence.akkuDativ.w.equals(answer.trim())) {

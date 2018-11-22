@@ -29,7 +29,7 @@
 
     <EditText
         android:id="@+id/editText_akkuDativ"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="44dp"
         android:layout_marginEnd="17dp"
         android:layout_marginStart="16dp"
@@ -45,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/editText_akkuDativ"
         app:layout_constraintStart_toEndOf="@+id/editText_akkuDativ" />

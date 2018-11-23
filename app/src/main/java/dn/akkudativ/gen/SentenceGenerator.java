@@ -61,7 +61,8 @@ public class SentenceGenerator {
 		lastWordsMasc.add(new Word("Hund", null));
 		lastWordsMasc.add(new Word("Tiger", null));
 		lastWordsMasc.add(new Word("Löwen", null));
-		lastWordsMasc.add(new Word("Elefanten", null));
+        lastWordsMasc.add(new Word("Elefanten", null));
+        lastWordsMasc.add(new Word("Clown", null));
 
         lastWordsFem.add(new Word("Maus", null));
         lastWordsFem.add(new Word("Kuh", null));
@@ -83,31 +84,32 @@ public class SentenceGenerator {
 	}
 
 	private void addAkkus() {
-		verbs.add(new Verb("sah", akkus));
-		verbs.add(new Verb("traf", akkus));
-		verbs.add(new Verb("hörte", akkus));
-		verbs.add(new Verb("fragte", akkus));
+		verbs.add(new Verb("sah", "im Fenster", akkus));
+		verbs.add(new Verb("traf", "auf der Straße", akkus));
+		verbs.add(new Verb("hörte", "am Telefon", akkus));
+		verbs.add(new Verb("fragte", "nach der Telefonnummer", akkus));
 		verbs.add(new Verb("beleidigte", akkus));
-		verbs.add(new Verb("beschimpfte", akkus));
-		verbs.add(new Verb("zeigte auf", akkus));
-		verbs.add(new Verb("überholte", akkus));
+		verbs.add(new Verb("beschimpfte", "lautstark", akkus));
+		verbs.add(new Verb("zeigte auf", "mit dem Finger", akkus));
+		verbs.add(new Verb("überholte", "mit voller Geschwindigkeit", akkus));
 		verbs.add(new Verb("erzählte über", akkus));
-		verbs.add(new Verb("kletterte auf", akkus));
+		verbs.add(new Verb("kletterte auf", "und lachte dabei", akkus));
 		verbs.add(new Verb("sprang über", akkus));
 		verbs.add(new Verb("sprang auf", akkus));
 		verbs.add(new Verb("flog über", akkus));
-		verbs.add(new Verb("schaute auf", akkus));
-		verbs.add(new Verb("freute sich über", akkus));
-		verbs.add(new Verb("belog", akkus));
+		verbs.add(new Verb("schaute auf", "und grinste", akkus));
+		verbs.add(new Verb("freute sich riesig über", akkus));
+		verbs.add(new Verb("belog", "ohne sich zu schämen", akkus));
 		verbs.add(new Verb("verarschte", akkus));
 		verbs.add(new Verb("lachte über", akkus));
 		verbs.add(new Verb("überlistete", akkus));
-        verbs.add(new Verb("verfolgte", akkus));
-        verbs.add(new Verb("beneidete", akkus));
+        verbs.add(new Verb("verfolgte", "zwei Stunden lang", akkus));
+        verbs.add(new Verb("beneidete", "um die schöne Frisur", akkus));
+        verbs.add(new Verb("machte die ganze Arbeit für", akkus));
         verbs.add(new Verb("stolperte über", akkus));
         verbs.add(new Verb("lief um", "herum", akkus));
-        verbs.add(new Verb("hielt", "fest", akkus));
-        verbs.add(new Verb("log", "an", akkus));
+        verbs.add(new Verb("hielt", "fest an den Haaren", akkus));
+        verbs.add(new Verb("log", "an, ohne sich zu schämen", akkus));
         verbs.add(new Verb("ließ", "tanzen", akkus));
         verbs.add(new Verb("bat", "um Rat", akkus));
         verbs.add(new Verb("besiegte", "im Armdrücken", akkus));
@@ -153,16 +155,13 @@ public class SentenceGenerator {
 
 	private void addDativs() {
         verbs.add(new Verb("bedankte sich bei", dativs));
-        verbs.add(new Verb("gehorchte", dativs));
         verbs.add(new Verb("hatte Angst vor", dativs));
-        verbs.add(new Verb("gratulierte", dativs));
-        verbs.add(new Verb("gefiel", dativs));
-        verbs.add(new Verb("gefiel", dativs));
-        verbs.add(new Verb("lag auf", dativs));
-        verbs.add(new Verb("saß auf", dativs));
-        verbs.add(new Verb("schwebte über", dativs));
-        verbs.add(new Verb("ruhte sich auf", "aus", dativs));
-        verbs.add(new Verb("spielte mit", dativs));
+        verbs.add(new Verb("gratulierte", "zum Geburtstag", dativs));
+        verbs.add(new Verb("gefiel", "nicht besonders", dativs));
+        verbs.add(new Verb("lag auf", "und schlief", dativs));
+        verbs.add(new Verb("saß auf", "und lachte", dativs));
+        verbs.add(new Verb("schwebte in der Luft über", dativs));
+        verbs.add(new Verb("spielte mit", "Fußball", dativs));
 		verbs.add(new Verb("lief mit", "weg", dativs));
         verbs.add(new Verb("lief", "hinterher", dativs));
         verbs.add(new Verb("gab", "ein Geschenk", dativs));
@@ -183,10 +182,15 @@ public class SentenceGenerator {
         verbs.add(new Verb("half", "beim Spicken", dativs));
         verbs.add(new Verb("las", "aus einem Buch vor", dativs));
         verbs.add(new Verb("flüsterte", "etwas zu", dativs));
+        verbs.add(new Verb("stellte", "eine Frage", dativs));
+        verbs.add(new Verb("verriet", "ein Geheimnis", dativs));
         verbs.add(new Verb("versteckte sich hinter", dativs));
-        verbs.add(new Verb("ging zu", dativs));
+        verbs.add(new Verb("ging zu", "rüber", dativs));
         verbs.add(new Verb("stand vor", dativs));
         verbs.add(new Verb("stand neben", dativs));
+        verbs.add(new Verb("wollte nichts von", dativs));
+        verbs.add(new Verb("arbeitete zusammen mit", dativs));
+        verbs.add(new Verb("erwartete nichts Gutes von", dativs));
         verbs.add(new Verb("sagte zu", ": \"Buh!\"", dativs));
 
 		dativs.add(new Dativ("dem", lastWordsMasc, "Bestimmter Artikel"));
